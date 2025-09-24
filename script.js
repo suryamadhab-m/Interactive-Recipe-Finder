@@ -6,7 +6,7 @@ class RecipeFinder {
         
         // API Configuration - Using demo mode by default for immediate functionality
         // Set to null to always use demo data (no API key required)
-        this.apiKey = null; // Set your Spoonacular API key here if you have one
+        this.apiKey = 'c8839b7255d14257a16ac2d9a8f36540'; // Set your Spoonacular API key here if you have one
         this.baseUrl = 'https://api.spoonacular.com/recipes';
         
         this.initializeApp();
