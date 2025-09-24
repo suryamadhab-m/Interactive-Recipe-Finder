@@ -6,7 +6,7 @@ class RecipeFinder {
         
         // API Configuration - Using Spoonacular API (Free tier)
         // Note: Replace with your actual API key
-        this.apiKey = 'YOUR_SPOONACULAR_API_KEY'; // Get from https://spoonacular.com/food-api
+        this.apiKey = 'c8839b7255d145c7a0bc2d3b836f540'; // Get from https://spoonacular.com/food-api
         this.baseUrl = 'https://api.spoonacular.com/recipes';
         
         this.initializeApp();
