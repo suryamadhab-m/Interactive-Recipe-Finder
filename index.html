@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-utensils"></i>
+                    Recipe Finder
+                </h1>
+                <p class="tagline">Transform your ingredients into delicious meals</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <h2>What's in your kitchen?</h2>
+                    <div class="ingredient-input-group">
+                        <input 
+                            type="text" 
+                            id="ingredientInput" 
+                            placeholder="Enter an ingredient (e.g., chicken, tomatoes, rice)"
+                            class="ingredient-input"
+                        >
+                        <button id="addIngredient" class="add-btn">
+                            <i class="fas fa-plus"></i>
+                            Add
+                        </button>
+                    </div>
+                    
+                    <!-- Selected Ingredients -->
+                    <div class="ingredients-container">
+                        <div id="ingredientsList" class="ingredients-list"></div>
+                    </div>
+                    
+                    <!-- Search Button -->
+                    <button id="searchRecipes" class="search-btn" disabled>
+                        <i class="fas fa-search"></i>
+                        Find Recipes
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h2>Recipe Suggestions</h2>
+                    <div class="results-info">
+                        <span id="resultsCount">0 recipes found</span>
+                    </div>
+                </div>
+                <div id="recipesList" class="recipes-grid"></div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Finding delicious recipes for you...</p>
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-cookie-bite"></i>
+                </div>
+                <h3>Ready to cook something amazing?</h3>
+                <p>Add some ingredients above to discover recipes you can make right now!</p>
+            </div>
+        </main>
+
+        <!-- Recipe Modal -->
+        <div id="recipeModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modalBody" class="modal-body">
+                    <!-- Recipe details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Toast -->
+        <div id="errorToast" class="toast error-toast" style="display: none;">
+            <i class="fas fa-exclamation-circle"></i>
+            <span id="errorMessage">Something went wrong!</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
